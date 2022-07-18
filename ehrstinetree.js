@@ -69,7 +69,7 @@ family.load( [
             { id: 20, pids: [17], gender: "male", name: "David Thomas Wells"},
               { id: 21, mid: 17, fid: 20, gender: "male", name: "Rush Lonnie Wells"},
             { id: 22, pids: [23], gender: "female", name: "Carrie Mariue Vesper"},
-            { id: 23, pids: [22], mid: 15, fid: 16, gender: "male", name: "Peter Josiah Rush"},
+            { id: 23, pids: [22], mid: 14, fid: 15, gender: "male", name: "Peter Josiah Rush"},
               { id: 24, mid: 22, fid: 23, gender: "female", name: "Elizabeth Marie Rush"},
               { id: 25, mid: 22, fid: 23, gender: "female", name: "Josephine Patricia Rush"},
               { id: 26, mid: 22, fid: 23, gender: "female", name: "Rosina Alexandra Rush"},
