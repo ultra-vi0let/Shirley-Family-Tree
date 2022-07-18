@@ -4982,7 +4982,7 @@ var FamilyTree = function (e, t) {
         60,
         5
     )}\n                                    ${FamilyTree.gradientCircleForDefs("male_circle", "#039BE5", 60, 5)}\n                                    ${FamilyTree.gradientCircleForDefs("female_circle", "#F57C00", 60, 5)}`),
-    (FamilyTree.templates.john.field_0 = "<text " + FamilyTree.attr.width + '="120" data-text-overflow="multiline" style="font-size: 16px;font-weight:bold;" fill="#aeaeae" x="60" y="150" text-anchor="middle">{val}</text>'),
+    (FamilyTree.templates.john.field_0 = "<text " + FamilyTree.attr.width + '="120" data-text-overflow="multiline" style="font-size: 32px;font-weight:bold;" fill="#aeaeae" x="60" y="150" text-anchor="middle">{val}</text>'),
     (FamilyTree.templates.john.field_1 = "<text " + FamilyTree.attr.width + '="150" style="font-size: 13px;" fill="#aeaeae" x="60" y="150" text-anchor="middle">{val}</text>'),
     (FamilyTree.templates.john.node = '<use x="0" y="0" xlink:href="#circle" />'),
     (FamilyTree.templates.john.img_0 = '<image preserveAspectRatio="xMidYMid slice" clip-path="url(#john_img_0)" xlink:href="{val}"  x="6" y="6"  width="108" height="108"></image>'),
