@@ -2,38 +2,46 @@ FamilyTree.elements.myTextArea = function (data, editElement, minWidth, readOnly
     var id = FamilyTree.elements.generateId();
     var value = data[editElement.binding];
     if (value == undefined) value = '';
-    if (readOnly && !value) {
-        return {
-            html: ''
-        };
-    }
-    var rOnlyAttr = readOnly ? 'readonly' : '';
-    var rDisabledAttr = readOnly ? 'disabled' : '';
-    return {
-        html: `<label for="${id}">${editElement.label}</label>
-                      <textarea ${rDisabledAttr} ${rOnlyAttr} id="${id}" name="${id}" style="width: 100%;height: 100px;" data-binding="${editElement.binding}">${value}</textarea>`,
-        id: id,
-        value: value
+      if (readOnly && !value) {
+          return {
+              html: ''
+          };
+      }
+      var rOnlyAttr = readOnly ? 'readonly' : '';
+      var rDisabledAttr = readOnly ? 'disabled' : '';
+      return {
+          html: `<h2 for="${id}">${editElement.label}</h2>
+                        <h1 ${rDisabledAttr} ${rOnlyAttr} id="${id}" name="${id}" style="width: 100%;height: 100px;" data-binding="${editElement.binding}">${value}</h1>`,
+          id: id,
+          value: value
     };
 
 };
 
+FamilyTree.templates.john.field_1 = "<text " + FamilyTree.attr.width + '="150" style="font-size: 0px;" fill="#aeaeae" x="60" y="150" text-anchor="middle">{val}</text>';
+
 var family = new FamilyTree(document.getElementById("tree"),{
   // mode: "dark",
+  // orientation: "bottom",
+  subtreeSeparation: 300,
   scaleInitial: FamilyTree.match.boundary,
   template: "john",
   editForm: {
+        buttons: {
+          edit: null
+        },
         addMore: null,
         generateElementsFromFields: false,
         elements: [
-            { type: 'myTextArea', label: 'Name:', binding: 'name' },
-            { type: 'myTextArea', label: 'Phone:', binding: 'phone' }
+            { type: 'myTextArea', label: 'email:', binding: 'email' }
         ]
     },
   nodeBinding: {
     field_0: "name",
-    field_1: "phone"
-  }});
+    field_1: "email"
+  }
+
+});
 
 
 family.on('render-link', function (sender, args) {
@@ -57,17 +65,17 @@ family.load( [
             { id: 8, pids: [7], gender: "male", name: "Eric Walter Linam"},
               { id: 9, mid: 7, fid: 8, gender: "female", name: "Adalyn Kay Linam"},
               { id: 10, mid: 7, fid: 8, gender: "female", name: "Emilia Rose Linam"},
-            { id: 11, mid: 5, fid: 6, gender: "male", name: "John Wesley Harden"},
+            { id: 11, mid: 5, fid: 6, gender: "male", email: "wes.numbfuzz@gmail.com", name: "John Wesley Harden"},
             { id: 12,pids: [13], mid: 5, fid: 6, gender: "female", name: "Hannah Rose Harden"},
             { id: 13, pids: [14], gender: "male", name: "Kevin Michael Puninske"},
           { id: 14, pids: [15], mid: 3, fid: 4, gender: "female", name: "Merilynne Sue Harden"},
           { id: 15, pids: [14], gender: "male", name: "Stephen Jon Rush"},
-            { id: 16, pids: [17], divorced: [17], name: "Thomas Ellison"},
-            { id: 17, pids: [16,20], divorced: [16], mid: 14, fid: 15, gender: "female", name: "Ruthemma Joy Rush"},
-              { id: 18, mid: 17, fid: 16, gender: "male", name: "Matthew Thomas Ellison"},
-              { id: 19, mid: 17, fid: 16, gender: "female", name: "Celeste Joy Ellison"},
-            { id: 20, pids: [17], gender: "male", name: "David Thomas Wells"},
-              { id: 21, mid: 17, fid: 20, gender: "female", name: "Rush Lonnie Wells"},
+            { id: 20, pids: [16,17], divorced: [17], mid: 14, fid: 15, gender: "female", name: "Ruthemma Joy Rush"},
+            { id: 16, pids: [20], divorced: [], gender: "male", name: "David Thomas Wells"},
+              { id: 19, mid: 20, fid: 16, gender: "female", name: "Rush Lonnie Wells"},
+            { id: 17, pids: [20], divorced: [20], gender: "male", name: "Thomas Ellison"},
+              { id: 18, mid: 20, fid: 17, gender: "male", name: "Matthew Thomas Ellison"},
+              { id: 21, mid: 20, fid: 17, gender: "female", name: "Celeste Joy Ellison"},
             { id: 22, pids: [23], gender: "female", name: "Carrie Marie Vesper"},
             { id: 23, pids: [22], mid: 14, fid: 15, gender: "male", name: "Peter Josiah Rush"},
               { id: 24, mid: 22, fid: 23, gender: "female", name: "Elizabeth Marie Rush"},
@@ -88,7 +96,7 @@ family.load( [
             { id: 39, mid: 36, fid: 37, gender: "female", name: "Claire Ellen Oman"},
             { id: 40, mid: 36, fid: 37, gender: "male", name: "Miles Andrew Oman"},
           { id: 41, pids: [42], divorced: [42], mid: 30, fid: 31, gender: "female", name: "Amy Margaret Ehrstine"},
-          { id: 42, pids: [41], divorced: [41], name: "Stephen Warren Ellisor"},
+          { id: 42, pids: [41], gender: "male", divorced: [41], name: "Stephen Warren Ellisor"},
             { id: 43, mid: 41, fid: 42, gender: "female", name: "Margaret Grace Ellisor"},
     ]
   );
