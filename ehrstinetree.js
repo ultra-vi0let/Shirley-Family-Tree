@@ -76,7 +76,7 @@ family.load( [
             { id: 7, pids: [8], mid: 5, fid: 6, gender: "female", img: "photos/lauren.jpg", name: "Lauren Ashley Harden"},
             { id: 8, pids: [7], gender: "male", img: "photos/eric.jpg", name: "Eric Walter Linam"},
               { id: 9, mid: 7, fid: 8, gender: "female", img: "photos/ady.jpg", name: "Adalyn Kay Linam"},
-              { id: 10, mid: 7, fid: 8, gender: "female", img: "photos/emy.jpg", name: "Emilia Rose Linam"},
+              { id: 10, mid: 7, fid: 8, gender: "female", img: "photos/emy.jpg", name: "Emelia Rose Linam"},
             { id: 11, mid: 5, fid: 6, gender: "male", email: "wes.numbfuzz@gmail.com", img: "photos/1.jpg", name: "John Wesley Harden"},
             { id: 12,pids: [13], mid: 5, fid: 6, gender: "female", img: "photos/hannah.jpg", name: "Hannah Rose Harden"},
             { id: 13, pids: [14], gender: "male", img: "photos/kevin.jpg", name: "Kevin Michael Puninske"},
