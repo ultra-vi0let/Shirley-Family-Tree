@@ -28,9 +28,9 @@ body {
 
 .title {
   width: 30vw;
-  min-width: 300px;
+  min-width: 150px;
   height: auto;
-  min-height: 300px;
+  min-height: 150px;
   position: absolute;
   z-index:9;
   left: 5px;
