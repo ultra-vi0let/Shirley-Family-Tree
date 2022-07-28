@@ -3,9 +3,9 @@
   src: url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
 }
 
-body {
+/* body {
   touch-action: pan-x pan-y;
-}
+} */
 
 .bft-light{
   background-image: url('photos/background.jpeg');
