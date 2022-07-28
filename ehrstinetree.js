@@ -1,6 +1,6 @@
-document.addEventListener('gesturestart', function (e) {
-    e.preventDefault();
-});
+// document.addEventListener('gesturestart', function (e) {
+//     e.preventDefault();
+// });
 
 FamilyTree.elements.myTextArea = function (data, editElement, minWidth, readOnly) {
     var id = FamilyTree.elements.generateId();
