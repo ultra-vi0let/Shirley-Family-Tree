@@ -1,0 +1,39 @@
+.bft-light{
+  background-image: url('photos/background.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  position: relative;
+  width:100%;
+  height:100vh;
+}
+
+.tree {
+  width:100%;
+  height:100%;
+  position: absolute;
+  z-index: 1
+}
+
+.title {
+  width: 30vw;
+  min-width: 300px;
+  height: auto;
+  min-height: 300px;
+  position: absolute;
+  z-index:9;
+  left: 5px;
+  background-image: url('photos/family-tree-title.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1000px) {
+  .title {
+    bottom: 20px;
+    background-position: bottom;
+  }
+
+}
