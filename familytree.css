@@ -1,3 +1,8 @@
+@font-face {
+  font-family: nameFont;
+  src: url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+}
+
 .bft-light{
   background-image: url('photos/background.jpeg');
   background-size: cover;

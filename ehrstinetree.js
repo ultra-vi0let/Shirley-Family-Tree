@@ -19,6 +19,7 @@ FamilyTree.elements.myTextArea = function (data, editElement, minWidth, readOnly
 };
 
 FamilyTree.templates.john.field_1 = "<text " + FamilyTree.attr.width + '="150" style="font-size: 0px;" fill="#aeaeae" x="60" y="150" text-anchor="middle">{val}</text>';
+
 var family = new FamilyTree(document.getElementById("tree"),{
   // mode: "dark",
   // orientation: "bottom",
